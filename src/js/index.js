@@ -13,3 +13,5 @@ const init = (settings) => {
   const options = Object.assign(defaultOptions, settings);
   console.log(options);
 };
+
+console.log(init());
