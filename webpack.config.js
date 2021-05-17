@@ -10,8 +10,14 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "./assets/js/[name].bundle.js",
   },
+  devtool: "source-map",
   module: {
     rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: "babel-loader",
+      },
       {
         test: /\.scss$/,
         use: [
