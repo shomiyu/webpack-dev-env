@@ -1,0 +1,9 @@
+{
+  "name": "dev-webpack-env",
+  "version": "1.0.0",
+  "description": "This is frontend develop environment with webpack. ",
+  "main": "index.js",
+  "repository": "https://github.com/shomiyu/dev-webpack-env",
+  "author": "Miyuki Shoji",
+  "license": "MIT"
+}
