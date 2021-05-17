@@ -1,12 +1,12 @@
 module.exports = {
   plugins: [
-    require("autoprefixer")({
+    require('autoprefixer')({
       grid: true,
     }),
-    require("css-declaration-sorter")({
-      order: "alphabetical",
+    require('css-declaration-sorter')({
+      order: 'alphabetical',
     }),
-    require("css-mqpacker")({
+    require('css-mqpacker')({
       sort: true,
     }),
   ],

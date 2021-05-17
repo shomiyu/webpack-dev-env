@@ -1,4 +1,4 @@
-import { hello } from "./modules/test";
+import { hello } from './modules/test';
 
 hello();
 
