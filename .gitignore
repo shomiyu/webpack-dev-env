@@ -24,9 +24,6 @@ dist
 # Vim swap files
 *.swp
 
-# dev env
-.vscode/
-
 # npm package
 package-lock.json
 
