@@ -1,10 +1,9 @@
 {
-  "name": "dev-webpack-env",
+  "name": "webpack-dev-env",
   "version": "1.0.0",
   "description": "This is frontend develop environment with webpack. ",
-  "repository": "https://github.com/shomiyu/dev-webpack-env",
+  "repository": "https://github.com/shomiyu/webpack-dev-env",
   "author": "Miyuki Shoji",
-  "license": "MIT",
   "browserslist": [
     "defaults"
   ],
