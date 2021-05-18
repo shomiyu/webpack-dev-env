@@ -11,13 +11,16 @@ const dir = {
 };
 
 const template = [];
-const documents = globule.find(`./${dir.src}/pug/**/*.pug`, {
-  ignore: `./${dir.src}/pug/**/_*.pug`,
-});
+const documents = globule.find(
+  [`./${dir.src}/pages/**/*.html`, `./${dir.src}/pages/**/*.pug`],
+  {
+    ignore: `./${dir.src}/pages/**/_*.pug`,
+  },
+);
 
 documents.forEach((document) => {
   const filename = document
-    .replace(`./${dir.src}/pug/`, '')
+    .replace(`./${dir.src}/pages/`, '')
     .replace('.pug', '.html');
 
   template.push(
