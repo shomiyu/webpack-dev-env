@@ -37,8 +37,7 @@ documents.forEach((document) => {
   );
 });
 
-module.exports = {
-  mode: 'development',
+module.exports = (env, argv) => ({
   entry: {
     main: [`./${dir.src}/js/index.js`, `./${dir.src}/scss/common.scss`],
   },
@@ -46,7 +45,7 @@ module.exports = {
     path: path.resolve(__dirname, dir.dist),
     filename: './assets/js/[name].bundle.js',
   },
-  devtool: 'source-map',
+  devtool: argv.mode === 'development' ? 'source-map' : false,
   module: {
     rules: [
       {
@@ -62,10 +61,21 @@ module.exports = {
             loader: 'css-loader',
             options: {
               url: false,
+              sourceMap: argv.mode === 'development',
             },
           },
-          'postcss-loader',
-          'sass-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: argv.mode === 'development',
+            },
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: argv.mode === 'development',
+            },
+          },
           'import-glob-loader',
         ],
       },
@@ -135,4 +145,4 @@ module.exports = {
     }),
     ...template,
   ],
-};
+});

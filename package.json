@@ -11,8 +11,9 @@
   "scripts": {
     "reinstall": "rimraf node_modules && yarn cache clean && yarn install",
     "clean": "rimraf ./dist",
-    "dev": "yarn run clean && webpack --watch",
-    "build": "yarn run clean && webpack"
+    "dev": "yarn run clean && webpack --mode=development --watch",
+    "test": "yarn run clean && webpack --mode=development",
+    "build": "yarn run clean && webpack --mode=production"
   },
   "devDependencies": {
     "@babel/core": "^7.14.2",
