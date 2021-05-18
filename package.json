@@ -1,7 +1,7 @@
 {
   "name": "webpack-dev-env",
   "version": "1.0.0",
-  "description": "This is frontend develop environment with webpack. ",
+  "description": "This is frontend develop environment with webpack.",
   "repository": "https://github.com/shomiyu/webpack-dev-env",
   "author": "Miyuki Shoji",
   "browserslist": [
@@ -52,15 +52,11 @@
     "stylelint": "^13.13.1",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-recommended-scss": "^4.2.0",
-    "stylelint-config-standard": "^22.0.0",
     "stylelint-order": "^4.1.0",
     "stylelint-prettier": "^1.2.0",
     "stylelint-scss": "^3.19.0",
     "stylelint-webpack-plugin": "^2.1.1",
     "webpack": "^5.37.0",
     "webpack-cli": "^4.7.0"
-  },
-  "dependencies": {
-    "ress": "^4.0.0"
   }
 }
