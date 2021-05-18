@@ -12,6 +12,11 @@ module.exports = {
     'string-quotes': 'single',
     'color-hex-case': 'lower',
     'color-hex-length': 'short',
-    'number-leading-zero': 'never',
+    'font-weight-notation': 'named-where-possible',
+    'font-family-name-quotes': 'always-where-recommended',
+    'function-url-quotes': 'always',
+    'no-descending-specificity': null,
+    'property-no-vendor-prefix': true,
+    'value-no-vendor-prefix': true,
   },
 };

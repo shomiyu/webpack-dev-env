@@ -1,16 +1,32 @@
-@import './modules/*';
+@charset 'UTF-8';
 
-a {
-  color: red;
-  transform: rotate(45deg);
-  @media screen and (min-width: 768px) {
-    color: yellow;
-  }
+/* =====================================================
+  1.0 - Foundation
+===================================================== */
+@import 'foundation/functions';
+@import 'foundation/setting';
+@import 'foundation/mixin';
+@import 'ress';
+@import 'foundation/base';
 
-  &:hover {
-    color: blue;
-    @media screen and (min-width: 400px) {
-      color: yellow;
-    }
-  }
-}
+/* =====================================================
+  2.0 - Layout
+===================================================== */
+
+/* =====================================================
+  3.0 - Object
+===================================================== */
+
+/*
+  3.1 - Component
+----------------------------------------------------- */
+
+/*
+  3.2 - Project
+----------------------------------------------------- */
+
+/*
+  3.2 - Utility
+----------------------------------------------------- */
+@import 'object/utility/margin';
+@import 'object/utility/screen-reader-text';
