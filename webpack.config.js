@@ -4,6 +4,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const globule = require('globule');
+const CopyPlugin = require('copy-webpack-plugin');
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
+const ImageminMozjpeg = require('imagemin-mozjpeg');
 
 const dir = {
   src: 'src',
@@ -94,6 +97,33 @@ module.exports = {
     new StyleLintPlugin({
       fix: true,
       failOnError: true,
+    }),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: `${dir.src}/img`,
+          to: 'assets/img',
+          noErrorOnMissing: true,
+        },
+      ],
+    }),
+    new ImageminPlugin({
+      test: /\.(jpe?g|png|gif|svg)$/i,
+      pngquant: {
+        quality: '95-100',
+      },
+      gifsicle: {
+        interlaced: false,
+        optimizationLevel: 1,
+        colors: 256,
+      },
+      svgo: {},
+      plugins: [
+        ImageminMozjpeg({
+          quality: 85,
+          progressive: true,
+        }),
+      ],
     }),
     ...template,
   ],
