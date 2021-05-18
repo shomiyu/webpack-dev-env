@@ -7,6 +7,7 @@ const globule = require('globule');
 const CopyPlugin = require('copy-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const ImageminMozjpeg = require('imagemin-mozjpeg');
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 const dir = {
   src: 'src',
@@ -124,6 +125,13 @@ module.exports = {
           progressive: true,
         }),
       ],
+    }),
+    new BrowserSyncPlugin({
+      host: 'localhost',
+      port: 8000,
+      online: true,
+      open: 'external',
+      server: { baseDir: [dir.dist] },
     }),
     ...template,
   ],
