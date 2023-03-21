@@ -4,7 +4,7 @@
 
 // Media Queries
 //--------------------------------------------
-@mixin mq($breakpoint, $type: min) {
+@mixin mq($breakpoint: tab, $type: min) {
   @if map-has-key($breakpoints, $breakpoint) {
     @if ($type == max) {
       $width: map-get($breakpoints, $breakpoint);
