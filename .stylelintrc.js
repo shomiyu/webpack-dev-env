@@ -7,7 +7,6 @@ module.exports = {
   ignoreFiles: ['**/node_modules/**', '/**/*.js'],
   rules: {
     'prettier/prettier': [true, { singleQuote: true }],
-    'order/properties-alphabetical-order': true,
     'string-quotes': 'single',
     'color-hex-case': 'lower',
     'function-url-quotes': 'always',
