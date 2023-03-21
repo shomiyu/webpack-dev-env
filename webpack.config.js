@@ -8,6 +8,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const ImageminMozjpeg = require('imagemin-mozjpeg');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+const webpack = require('webpack');
 
 const dir = {
   src: 'src',
@@ -142,6 +143,10 @@ module.exports = (env, argv) => ({
       online: true,
       open: 'external',
       server: { baseDir: [dir.dist] },
+    }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
     }),
     ...template,
   ],
