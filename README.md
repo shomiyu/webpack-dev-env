@@ -1,6 +1,20 @@
 # webpack dev env
 
+## 機能
+
+- Pug ( HTML 可能 )
+- Sass ( Dart Sass )
+- jQuery
+- JavaScript モジュール構文
+- 画像圧縮 ( imagemin )
+- コードフォーマット ( prettier )
+- ベンダープレフィックス自動付与 ( PostCSS / autoprefixer )
+- 同一メディアクエリの集約（ PostCSS / mqpacker ）
+- ブラウザホットリロード ( browser-sync )
+
 ## セットアップ
+
+サポートしているバージョン
 
 - node.js v14.18.1
 - yarn v1.22.17
