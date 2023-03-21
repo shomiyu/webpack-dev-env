@@ -1,3 +1,3 @@
-import { hello } from './modules/test';
+import { hello } from './modules/hello';
 
 hello();
