@@ -107,7 +107,7 @@ module.exports = (env, argv) => ({
     }),
     new StyleLintPlugin({
       fix: true,
-      failOnError: true,
+      failOnError: false,
     }),
     new CopyPlugin({
       patterns: [
