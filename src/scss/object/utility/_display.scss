@@ -1,0 +1,28 @@
+@use '../../foundation/setting' as *;
+@use '../../foundation/functions' as *;
+@use '../../foundation/mixin' as *;
+
+// SPのみ表示
+.u-display-sp-only {
+  @include mq() {
+    display: none;
+  }
+}
+
+// タブレット以上で表示
+.u-display-tab {
+  display: none;
+
+  @include mq() {
+    display: block;
+  }
+}
+
+// PCのみ表示
+.u-display-pc {
+  display: none;
+
+  @include mq(lap) {
+    display: block;
+  }
+}

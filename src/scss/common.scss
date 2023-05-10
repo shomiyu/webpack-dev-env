@@ -3,11 +3,11 @@
 /* =====================================================
   1.0 - Foundation
 ===================================================== */
-@import 'foundation/functions';
-@import 'foundation/setting';
-@import 'foundation/mixin';
-@import 'foundation/reset';
-@import 'foundation/base';
+@use 'foundation/functions' as *;
+@use 'foundation/setting' as *;
+@use 'foundation/mixin' as *;
+@use 'foundation/reset' as *;
+@use 'foundation/base' as *;
 
 /* =====================================================
   2.0 - Layout
@@ -28,5 +28,7 @@
 /*
   3.2 - Utility
 ----------------------------------------------------- */
-@import 'object/utility/margin';
-@import 'object/utility/screen-reader-text';
+@use 'object/utility/margin' as *;
+@use 'object/utility/display' as *;
+@use 'object/utility/list' as *;
+@use 'object/utility/screen-reader-text' as *;

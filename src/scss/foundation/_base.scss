@@ -1,12 +1,14 @@
+@use 'functions' as *;
+@use 'setting' as *;
+@use 'mixin' as *;
+
 /*
   base
 -----------------------------------------------------*/
 html {
   box-sizing: border-box;
-  font-family: $font-set-primary;
+  font-family: var(--font-base);
   height: 100%;
-  letter-spacing: 0.05em;
-  word-break: break-all;
 }
 
 *,
@@ -16,8 +18,8 @@ html {
 }
 
 body {
-  background-color: $color-base-primary;
-  color: $color-text-main;
+  background-color: var(--color-bg-white);
+  color: var(--color-text-main);
   font-size: fz(16);
   height: 100%;
   line-height: 1.5;
@@ -26,7 +28,7 @@ body {
 img {
   height: auto;
   vertical-align: bottom;
-  width: 100%;
+  max-width: 100%;
 }
 
 a {

@@ -1,173 +1,53 @@
-.u-mt--sp {
-  &--0 {
-    margin-top: 0;
-  }
-  &--xsmall {
-    margin-top: 0.5em;
-  }
-  &--small {
-    margin-top: 1em;
-  }
-  &--medium {
-    margin-top: 1.5em;
-  }
-  &--large {
-    margin-top: 2em;
-  }
-  &--xlarge {
-    margin-top: 2.5em;
-  }
-}
+@use '../../foundation/mixin' as *;
 
-.u-mb--sp {
-  &--0 {
-    margin-bottom: 0;
-  }
-  &--xsmall {
-    margin-bottom: 0.5em;
-  }
-  &--small {
-    margin-bottom: 1em;
-  }
-  &--medium {
-    margin-bottom: 1.5em;
-  }
-  &--large {
-    margin-bottom: 2em;
-  }
-  &--xlarge {
-    margin-bottom: 2.5em;
-  }
-}
+//============================================
+//  MARGIN UTILITY
+//============================================
 
-@include mq(tab) {
-  .u-mt--tab {
-    &--0 {
-      margin-top: 0;
-    }
-    &--xsmall {
-      margin-top: 0.5em;
-    }
-    &--small {
-      margin-top: 1em;
-    }
-    &--medium {
-      margin-top: 1.5em;
-    }
-    &--large {
-      margin-top: 2em;
-    }
-    &--xlarge {
-      margin-top: 2.5em;
+$marginLists: 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60;
+
+@each $marginList in $marginLists {
+  .u-mb-sp-#{$marginList} {
+    margin-bottom: #{$marginList}px;
+  }
+
+  .u-mt-sp-#{$marginList} {
+    margin-top: #{$marginList}px;
+  }
+
+  .u-mb-tab-#{$marginList} {
+    @include mq(tab) {
+      margin-bottom: #{$marginList}px;
     }
   }
 
-  .u-mb--tab {
-    &--0 {
-      margin-bottom: 0;
-    }
-    &--xsmall {
-      margin-bottom: 0.5em;
-    }
-    &--small {
-      margin-bottom: 1em;
-    }
-    &--medium {
-      margin-bottom: 1.5em;
-    }
-    &--large {
-      margin-bottom: 2em;
-    }
-    &--xlarge {
-      margin-bottom: 2.5em;
-    }
-  }
-}
-
-@include mq(lap) {
-  .u-mt--lap {
-    &--0 {
-      margin-top: 0;
-    }
-    &--xsmall {
-      margin-top: 0.5em;
-    }
-    &--small {
-      margin-top: 1em;
-    }
-    &--medium {
-      margin-top: 1.5em;
-    }
-    &--large {
-      margin-top: 2em;
-    }
-    &--xlarge {
-      margin-top: 2.5em;
+  .u-mt-tab-#{$marginList} {
+    @include mq(tab) {
+      margin-top: #{$marginList}px;
     }
   }
 
-  .u-mb--lap {
-    &--0 {
-      margin-bottom: 0;
-    }
-    &--xsmall {
-      margin-bottom: 0.5em;
-    }
-    &--small {
-      margin-bottom: 1em;
-    }
-    &--medium {
-      margin-bottom: 1.5em;
-    }
-    &--large {
-      margin-bottom: 2em;
-    }
-    &--xlarge {
-      margin-bottom: 2.5em;
-    }
-  }
-}
-
-@include mq(desk) {
-  .u-mt--desk {
-    &--0 {
-      margin-top: 0;
-    }
-    &--xsmall {
-      margin-top: 0.5em;
-    }
-    &--small {
-      margin-top: 1em;
-    }
-    &--medium {
-      margin-top: 1.5em;
-    }
-    &--large {
-      margin-top: 2em;
-    }
-    &--xlarge {
-      margin-top: 2.5em;
+  .u-mb-lap-#{$marginList} {
+    @include mq(lap) {
+      margin-bottom: #{$marginList}px;
     }
   }
 
-  .u-mb--desk {
-    &--0 {
-      margin-bottom: 0;
+  .u-mt-lap-#{$marginList} {
+    @include mq(lap) {
+      margin-top: #{$marginList}px;
     }
-    &--xsmall {
-      margin-bottom: 0.5em;
+  }
+
+  .u-mb-desk-#{$marginList} {
+    @include mq(desk) {
+      margin-bottom: #{$marginList}px;
     }
-    &--small {
-      margin-bottom: 1em;
-    }
-    &--medium {
-      margin-bottom: 1.5em;
-    }
-    &--large {
-      margin-bottom: 2em;
-    }
-    &--xlarge {
-      margin-bottom: 2.5em;
+  }
+
+  .u-mt-desk-#{$marginList} {
+    @include mq(desk) {
+      margin-top: #{$marginList}px;
     }
   }
 }
